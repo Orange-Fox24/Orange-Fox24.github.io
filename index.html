@@ -5,69 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мое портфолио</title>
     <style>
-        /* Темная тема */
         body {
-            background-color: #333;
-            color: #fff;
+            background-color: #f7f7f7;
+            color: #333;
+            transition: background-color 0.5s;
         }
-        
-        /* Оранжевый акцент */
-       .accent {
-            color: #ffa07a;
+
+        .accent {
+            color: #FF5C00;
         }
-        
-        /* Шапка */
+
+        .accent:hover {
+            color: #FF9900;
+        }
+
         header {
-            background-color: #444;
+            background-color: #FF5C00;
             padding: 20px;
             text-align: center;
         }
-        
-        /* Контент */
+
         main {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
         }
-        
-        /* Блоки проектов */
-       .project {
-            background-color: #444;
+
+        .project {
+            background-color: #fff;
             padding: 20px;
             margin: 20px;
             width: 300px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.5s, box-shadow 0.5s;
         }
-        
-        /* Заголовки проектов */
-       .project h2 {
-            color: #ffa07a;
+
+        .project h2 {
+            color: #FF5C00;
             margin-top: 0;
         }
-        
-        /* Описание проектов */
-       .project p {
-            color: #ccc;
+
+        .project p {
+            color: #666;
         }
-        
-        /* Кнопки */
-       .btn {
-            background-color: #ffa07a;
+
+        .btn {
+            background-color: #FF5C00;
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
-        
-       .btn:hover {
-            background-color: #ff9900;
+
+        .btn:hover {
+            background-color: #FF9900;
+        }
+
+        .fox-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #FF5C00;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .fox-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .about-me {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-me h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Стиль для темной темы */
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-theme.accent {
+            color: #FF9900;
+        }
+
+        .dark-theme.accent:hover {
+            color: #FF5C00;
+        }
+
+        .dark-theme header {
+            background-color: #FF5C00;
+        }
+
+        .dark-theme.project {
+            background-color: #444;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .dark-theme.project h2 {
+            color: #FF9900;
+        }
+
+        .dark-theme.project p {
+            color: #ccc;
+        }
+
+        .dark-theme.btn {
+            background-color: #FF5C00;
+        }
+
+        .dark-theme.btn:hover {
+            background-color: #FF5C00;
+        }
+
+        .dark-theme.fox-frame {
+            border: 5px solid #FF9900;
+        }
+
+        .dark-theme.fox-frame img {
+            filter: brightness(0.7);
         }
     </style>
 </head>
 <body>
+    <!-- Переключатель тем -->
+    <input type="checkbox" id="theme-switcher" class="theme-switcher">
+    <label for="theme-switcher">Темная тема</label>
+
+    <!-- Рамка с фото -->
+    <div class="fox-frame">
+        <img src="your_photo_url" alt="Мое фото">
+    </div>
+
+    <!-- Информация о себе -->
+    <div class="about-me">
+        <h1>Мое имя</h1>
+        <p>Моя биография</p>
+    </div>
+
     <header>
         <h1>Мое портфолио</h1>
     </header>
@@ -77,16 +168,26 @@
             <p>Описание проекта 1</p>
             <a href="#" class="btn">Посмотреть</a>
         </div>
-        <div class="project">
-            <h2>Проект 2</h2>
-            <p>Описание проекта 2</p>
-            <a href="#" class="btn">Посмотреть</a>
-        </div>
+                </div>
         <div class="project">
             <h2>Проект 3</h2>
             <p>Описание проекта 3</p>
             <a href="#" class="btn">Посмотреть</a>
         </div>
+        <div class="project">
+            <h2>Проект 4</h2>
+            <p>Описание проекта 4</p>
+            <a href="#" class="btn">Посмотреть</a>
+        </div>
     </main>
+
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('change', () => {
+            body.classList.toggle('dark-theme');
+        });
+    </script>
 </body>
 </html>
