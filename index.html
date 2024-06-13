@@ -113,16 +113,16 @@
             background-color: #FF5C00;
         }
 
-        .dark-theme.project {
+        .dark-theme .project {
             background-color: #444;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
 
-        .dark-theme.project h2 {
+        .dark-theme .project h2 {
             color: #FF9900;
         }
 
-        .dark-theme.project p {
+        .dark-theme .project p {
             color: #ccc;
         }
 
@@ -168,8 +168,7 @@
             <p>Описание проекта 1</p>
             <a href="#" class="btn">Посмотреть</a>
         </div>
-                </div>
-        <div class="project">
+                <div class="project">
             <h2>Проект 3</h2>
             <p>Описание проекта 3</p>
             <a href="#" class="btn">Посмотреть</a>
@@ -184,9 +183,11 @@
     <script>
         const themeSwitcher = document.getElementById('theme-switcher');
         const body = document.body;
+        const projects = document.querySelectorAll('.project');
 
         themeSwitcher.addEventListener('change', () => {
             body.classList.toggle('dark-theme');
+            projects.forEach(project => project.classList.toggle('dark-theme'));
         });
     </script>
 </body>
