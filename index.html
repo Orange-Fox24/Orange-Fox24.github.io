@@ -1,9 +1,92 @@
-<!DOCTYPE html >
-< html >
-    < голова >
-        <title> Портфолио </title>​​​​
-    </ голова >
-    < тело >
-        <p> Это мое первое портфолио на GitHub . </ р >
-    </ тело >
-</ html >
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое портфолио</title>
+    <style>
+        /* Темная тема */
+        body {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        /* Оранжевый акцент */
+       .accent {
+            color: #ffa07a;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #444;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Контент */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        /* Блоки проектов */
+       .project {
+            background-color: #444;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Заголовки проектов */
+       .project h2 {
+            color: #ffa07a;
+            margin-top: 0;
+        }
+        
+        /* Описание проектов */
+       .project p {
+            color: #ccc;
+        }
+        
+        /* Кнопки */
+       .btn {
+            background-color: #ffa07a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+       .btn:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мое портфолио</h1>
+    </header>
+    <main>
+        <div class="project">
+            <h2>Проект 1</h2>
+            <p>Описание проекта 1</p>
+            <a href="#" class="btn">Посмотреть</a>
+        </div>
+        <div class="project">
+            <h2>Проект 2</h2>
+            <p>Описание проекта 2</p>
+            <a href="#" class="btn">Посмотреть</a>
+        </div>
+        <div class="project">
+            <h2>Проект 3</h2>
+            <p>Описание проекта 3</p>
+            <a href="#" class="btn">Посмотреть</a>
+        </div>
+    </main>
+</body>
+</html>
